@@ -1,15 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
+    background-color: rgb(211, 208, 208);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 header {
-    background-color: lightblue;
+    /* you have 3 selectors with the same properties
+    like display felx you can later group them 
+    in one selector for cleaner code*/
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(191, 24, 2);
+    color: aliceblue;
+    min-height: 50px;
     text-align: center;
+    border: 2px;
+    border-style:outset  ;
+    border-color: crimsons;
+}
+img {
+    width: 60px;
+    height: auto;
 }
 footer {
-    background-color: lightblue;
+    background-color: rgb(191, 24, 2);
     display: flex;
     justify-content: space-around;
     margin-top: auto;
+    text-align: center;
+    border: 2px;
+    border-style:outset  ;
 }
