@@ -1,13 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Highly recommended: keeps borders from breaking layouts */
+    font-family: 'Exo 2', sans-serif;
 }
-
+html, body {
+    height: 100%;
+}
 body {
     background-color: rgb(211, 208, 208);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 header {
@@ -17,6 +20,7 @@ header {
     background-color: rgb(191, 24, 2);
     min-height: 50px;
     border: 2px solid black;
+    flex-shrink: 0; /* Prevents header from squishing */
 }
 
 .header-content {
@@ -34,7 +38,10 @@ img {
     display: flex;
     gap: 40px;
 }
-
+section {
+    border: 2px solid black;
+    flex: 1; /* Automatically divides the screen height equally (25% each) */
+}
 footer {
     background-color: rgb(191, 24, 2);
     display: flex;
