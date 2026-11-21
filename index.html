@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My movie library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,
+    wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
     <header>
@@ -19,13 +23,129 @@
                 </nav>
             </div>
     </header>
-    <section id="first-section"></section>
 
-    <section id="second-section"></section>
+    <section id="first-section">
+    <button class="search-btn">Search</button>
 
-    <section id="third-section"></section>
+    <div class="media-buttons">
+        <button class="media-btn">Shows</button>
+        <button class="media-btn">Movies</button>
+    </div>
+    </section>
 
-    <section id="fourth-section"></section>
+    
+    <section id="second-section">
+
+        <div class="section-heading">
+            <h2>Recently Watched</h2>
+
+            <div class="carousel-buttons">
+                <button class="arrow-btn" id="prev-btn">
+                    &#10094;
+                </button>
+
+                <button class="arrow-btn" id="next-btn">
+                    &#10095;
+                </button>
+            </div>
+        </div>
+
+        <div class="movie-carousel">
+            <div class="movie-track" id="movie-track">
+
+                <!-- Movie cards will be added here using JavaScript -->
+
+            </div>
+        </div>
+
+    </section>
+
+
+    
+    <section id="third-section">
+        <div class="results-heading">
+            <div>
+                <h2>Discover</h2>
+                <p>Your next favourite might be hiding here.</p>
+            </div>
+            <span class="results-count">YOUR RESULTS</span>
+        </div>
+
+        <div class="results-panel">
+            <div class="results-list" id="results-list">
+
+                <!-- Example result 1 -->
+                <div class="result-card">
+                    <div class="result-poster">
+                        <span>01</span>
+                    </div>
+
+                    <div class="result-info">
+                        <span class="result-type">MOVIE · 2014</span>
+                        <h3>Interstellar</h3>
+                        <p>A journey beyond the limits of space and time.</p>
+                        <span class="result-status in-library">Already watched</span>
+                    </div>
+
+                    <span class="result-arrow">↗</span>
+                </div>
+
+                <!-- Example result 2 -->
+                <div class="result-card">
+                    <div class="result-poster">
+                        <span>02</span>
+                    </div>
+
+                    <div class="result-info">
+                        <span class="result-type">SHOW · 2022</span>
+                        <h3>Wednesday</h3>
+                        <p>A mysterious school, strange secrets, and a peculiar girl.</p>
+                        <span class="result-status not-watched">Not in your library</span>
+                    </div>
+
+                    <span class="result-arrow">↗</span>
+                </div>
+
+            </div>
+
+            <button class="load-more-btn" id="load-more-btn">
+                Load more <span>↓</span>
+            </button>
+        </div>
+    </section>
+
+
+    
+    <section id="fourth-section">
+
+        <div class="fun-heading">
+            <span class="fun-eyebrow">A LITTLE SOMETHING EXTRA</span>
+            <h2>What are you in the mood for?</h2>
+            <p>Let's make your next movie night interesting.</p>
+        </div>
+
+        <div class="fun-actions">
+
+            <button class="fun-card taste-card" id="rate-taste-btn">
+                <span class="fun-icon">✧</span>
+                <span class="fun-card-label">01 / DISCOVER YOURSELF</span>
+                <h3>Rate My Taste</h3>
+                <p>Let's see what your watchlist says about you.</p>
+                <span class="fun-card-link">Reveal my taste <span>↗</span></span>
+            </button>
+
+            <button class="fun-card recommend-card" id="recommend-btn">
+                <span class="fun-icon">✦</span>
+                <span class="fun-card-label">02 / FIND YOUR NEXT OBSESSION</span>
+                <h3>Recommend Me Something</h3>
+                <p>Surprise me. I promise I'll give it a chance.</p>
+                <span class="fun-card-link">Find my next watch <span>↗</span></span>
+            </button>
+
+        </div>
+
+    </section>
+
     <footer>
         <a href="https://github.com/nour-rb">My Github</a>
         <a href="www.linkedin.com/in/aya-roubhi">My LinkedIn</a>
