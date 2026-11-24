@@ -450,18 +450,47 @@ footer a:hover {
 
 
 
-/* FOURTH SECTION — FUN FEATURES */
+
+/* FOURTH SECTION — SIMPLE BUTTONS */
 
 #fourth-section {
-    background:
-        radial-gradient(
-            ellipse at 50% 100%,
-            rgba(143, 24, 53, 0.2),
-            transparent 65%
-        ),
-        #170D12;
-    padding: 55px 35px;
+    background: var(--bg-dark);
+    padding: 30px 35px;
 }
+
+.bottom-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.bottom-buttons button {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-light);
+    padding: 12px 22px;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.bottom-buttons button:hover {
+    background: var(--crimson);
+    border-color: var(--rose-red);
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .bottom-buttons {
+        flex-direction: column;
+    }
+
+    .bottom-buttons button {
+        width: 100%;
+    }
+}
+
 
 /* HEADING */
 
