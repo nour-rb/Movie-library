@@ -710,3 +710,51 @@ header {
     }
 }
 
+
+/* RECENTLY WATCHED — SIMPLE CARDS */
+
+.movie-card {
+    flex: 0 0 220px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: none;
+}
+
+.movie-poster-placeholder {
+    aspect-ratio: 2 / 2.3;
+    padding: 18px;
+    display: flex;
+    align-items: flex-end;
+    background: #30202A;
+}
+
+.movie-poster-placeholder h3 {
+    padding: 0;
+    color: var(--text-light);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.movie-poster-placeholder span {
+    display: none;
+}
+
+.movie-card-info {
+    padding: 12px 14px;
+}
+
+.movie-card-info p {
+    font-size: 12px;
+    color: #A98D98;
+}
+
+.movie-card-info .movie-rating {
+    margin-top: 7px;
+    color: var(--rose-red);
+}
