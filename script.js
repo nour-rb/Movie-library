@@ -119,3 +119,91 @@ recentMovies.forEach(movie => {
     movieTrack.appendChild(movieCard);
 });
 
+
+const searchInput = document.querySelector("#search-input");
+const searchButton = document.querySelector("#search-btn");
+
+const resultsPanel = document.querySelector("#results-panel");
+const resultsList = document.querySelector("#results-list");
+const resultsCount = document.querySelector("#results-count");
+
+
+function searchLibrary() {
+    const query = searchInput.value.trim().toLowerCase();
+
+    // Don't show anything if the search is empty
+    if (!query) {
+        resultsPanel.classList.remove("is-visible");
+        resultsCount.hidden = true;
+        return;
+    }
+
+    // Find matching titles
+    const matches = movies.filter(movie =>
+        movie.title.toLowerCase().includes(query)
+    );
+
+    // Show the results area
+    resultsPanel.classList.add("is-visible");
+    resultsCount.hidden = false;
+    resultsCount.textContent = `${matches.length} RESULTS`;
+
+    // Clear previous results
+    resultsList.replaceChildren();
+
+    if (matches.length === 0) {
+        const message = document.createElement("p");
+        message.classList.add("no-results");
+        message.textContent = "No results found.";
+        resultsList.appendChild(message);
+        return;
+    }
+
+    // Display matching movies
+    matches.forEach((movie, index) => {
+        const card = document.createElement("div");
+        card.classList.add("result-card");
+
+        const poster = document.createElement("div");
+        poster.classList.add("result-poster");
+        poster.textContent = String(index + 1).padStart(2, "0");
+
+        const info = document.createElement("div");
+        info.classList.add("result-info");
+
+        const type = document.createElement("span");
+        type.classList.add("result-type");
+        type.textContent =
+            `${movie.type.toUpperCase()}${movie.year ? " · " + movie.year : ""}`;
+
+        const title = document.createElement("h3");
+        title.textContent = movie.title;
+
+        const details = document.createElement("p");
+        details.textContent =
+            movie.rating === null
+                ? "Not rated yet"
+                : `★ ${movie.rating}/5`;
+
+        const status = document.createElement("span");
+        status.classList.add("result-status", "in-library");
+        status.textContent = "In your library";
+
+        info.append(type, title, details, status);
+        card.append(poster, info);
+
+        resultsList.appendChild(card);
+    });
+}
+
+
+// Search button
+searchButton.addEventListener("click", searchLibrary);
+
+// Search when pressing Enter
+searchInput.addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+        searchLibrary();
+    }
+});
+

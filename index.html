@@ -24,14 +24,23 @@
             </div>
     </header>
 
+    
     <section id="first-section">
-    <button class="search-btn">Search</button>
+        <div class="search-container">
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Search movies or shows..."
+            >
+            <button class="search-btn" id="search-btn">Search</button>
+        </div>
 
-    <div class="media-buttons">
-        <button class="media-btn">Shows</button>
-        <button class="media-btn">Movies</button>
-    </div>
+        <div class="media-buttons">
+            <button class="media-btn">Shows</button>
+            <button class="media-btn">Movies</button>
+        </div>
     </section>
+
 
     
     <section id="second-section">
@@ -62,60 +71,26 @@
 
 
     
+ 
     <section id="third-section">
+
         <div class="results-heading">
             <div>
-                <h2>Discover</h2>
-                <p>Your next favourite might be hiding here.</p>
+                <h2>Results</h2>
+                <p id="results-message"> </p>
             </div>
-            <span class="results-count">YOUR RESULTS</span>
+
+            <span class="results-count" id="results-count" hidden></span>
         </div>
 
-        <div class="results-panel">
+        <div class="results-panel" id="results-panel">
             <div class="results-list" id="results-list">
-
-                <!-- Example result 1 -->
-                <div class="result-card">
-                    <div class="result-poster">
-                        <span>01</span>
-                    </div>
-
-                    <div class="result-info">
-                        <span class="result-type">MOVIE · 2014</span>
-                        <h3>Interstellar</h3>
-                        <p>A journey beyond the limits of space and time.</p>
-                        <span class="result-status in-library">Already watched</span>
-                    </div>
-
-                    <span class="result-arrow">↗</span>
-                </div>
-
-                <!-- Example result 2 -->
-                <div class="result-card">
-                    <div class="result-poster">
-                        <span>02</span>
-                    </div>
-
-                    <div class="result-info">
-                        <span class="result-type">SHOW · 2022</span>
-                        <h3>Wednesday</h3>
-                        <p>A mysterious school, strange secrets, and a peculiar girl.</p>
-                        <span class="result-status not-watched">Not in your library</span>
-                    </div>
-
-                    <span class="result-arrow">↗</span>
-                </div>
-
+                <!-- Search results appear here -->
             </div>
-
-            <button class="load-more-btn" id="load-more-btn">
-                Load more <span>↓</span>
-            </button>
         </div>
+
     </section>
 
-
-    
     
    
     <section id="fourth-section">
